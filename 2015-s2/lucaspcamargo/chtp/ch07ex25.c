@@ -24,21 +24,21 @@ MenuFunction menuPrint, menuMinimum, menuMaximum, menuAverages;
 
 #define MENU_COUNT 5
 
-/* Function pointer array for menu actions */
-MenuFunction *menuFuncs[] = {menuPrint, menuMaximum, menuMinimum, menuAverages, 0};    
-
-/* String array for menu descriptions */
-const char * menuStr[MENU_COUNT] = {
-    "Print the array of grades", 
-    "Find the maximum grade", 
-    "Find the minimum grade", 
-    "Print the average on all tests for each student", 
-    "Quit"};
-
     
 /* function main begins program execution */
 int main( void )
 {
+
+    /* Function pointer array for menu actions */
+    MenuFunction *menuFuncs[] = {menuPrint, menuMaximum, menuMinimum, menuAverages, 0};    
+
+    /* String array for menu descriptions */
+    const char * menuStr[MENU_COUNT] = {
+        "Print the array of grades", 
+        "Find the maximum grade", 
+        "Find the minimum grade", 
+        "Print the average on all tests for each student", 
+        "Quit"};
     
     /* initialize student grades for three students (rows) */
     const int studentGrades[ STUDENTS ][ EXAMS ] =
